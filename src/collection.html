@@ -23,47 +23,17 @@
   </head>
   <body>
     <div id="container">
-      <div
-        id="nav-menu"
-        class="w-full h-full lg:min-h-screen lg:w-95 bg-white z-50 fixed top-0 left-0 flex-col items-center py-10 hidden"
+      <header
+        id="main-header"
+        class="fixed bg-white top-0 left-0 w-full h-24 text-xl lg:text-xl z-50 text-black transition-all overflow-hidden"
       >
-        <div class="w-full flex flex-col gap-10">
-          <div class="flex justify-between items-center w-full gap-20 px-10">
-            <i class="fa-solid fa-x cursor-pointer" onclick="closeMenu()"></i>
-            <span
-              ><img
-                class="w-25 py-4"
-                src="../asset/photo/logo/AliaguiHomeSVG.svg"
-                alt="logo brand Aliagui Home"
-            /></span>
-          </div>
-          <ul
-            id="li-menu"
-            class="pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
-          >
-            <li><a href="../src/accueil.html">Acceuil</a></li>
-            <li><a href="../src/collection.html">Collection</a></li>
-            <li><a href="../src/histoire.html">Notre Histoire</a></li>
-            <li>
-              <button
-                class="p-2 uppercase cursor-pointer hover:bg-[#895737] hover:text-white transition-colors duration-200"
-              >
-                Nous Contacter
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <header id="main-header" class="fixed w-full text-xl lg:text-xl z-1">
         <nav id="nav-bar" class="flex justify-between items-center h-24">
           <ul
             class="flex justify-between items-center w-full px-4 py-2 lg:px-9 lg:py-5"
           >
-            <li>
-              <span class="space-x-2 cursor-pointer" onclick="openMenu()"
-                ><i class="fa-solid fa-bars"></i>
-                <span class="hidden lg:inline">Menu</span>
-              </span>
+            <li id="open-menu" class="space-x-2 cursor-pointer">
+              <i class="fa-solid fa-bars"></i>
+              <span class="hidden lg:inline">Menu</span>
             </li>
             <li>
               <span
@@ -82,6 +52,39 @@
         </nav>
       </header>
       <main>
+        <!-- & -->
+        <div
+          id="nav-menu"
+          class="w-0 min-h-screen bg-white z-1 lg:shadow-black/20 shadow-sm fixed top-0 left-0 flex-col items-center py-10 overflow-hidden transition-[width] duration-1500"
+        >
+          <div id="nav-menu-close" class="w-full flex flex-col gap-10">
+            <div class="flex justify-between items-center gap-20 px-10">
+              <i id="close" class="fa-solid fa-x cursor-pointer p-5"></i>
+              <span
+                ><img
+                  class="w-24 py-4"
+                  src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                  alt="logo brand Aliagui Home"
+              /></span>
+            </div>
+            <ul
+              id="li-menu"
+              class="w-60 pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
+            >
+              <li><a href="../src/accueil.html">Acceuil</a></li>
+              <li><a href="../src/collection.html">Collection</a></li>
+              <li><a href="../src/histoire.html">Notre Histoire</a></li>
+              <li>
+                <button
+                  class="uppercase p-2 cursor-pointer bg-[#895737] text-white"
+                >
+                  Nous Contacter
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- & -->
         <section
           id="new-collection"
           class="flex items-center p-10 lg:items-end lg:justify-center min-h-screen lg:p-28 bg-[url(../asset/photo/image/new_coll.jpeg)] bg-center text-white"
@@ -99,9 +102,8 @@
             </div>
           </div>
         </section>
-        <!-- Vue Principale (Grille des 3 catégories) -->
-        <div id="main-view" class="pt-[140px] pb-20 border border-gray-200">
-          <section class="text-center mb-16 max-w-2xl mx-auto px-4">
+        <div id="main-view" class="pt-[140px] pb-20">
+          <section class="text-center mb-20 max-w-2xl mx-auto px-4">
             <p class="text-xs tracking-[0.3em] uppercase text-gray-400 mb-2">
               Aliagui Home · 2026
             </p>
@@ -114,86 +116,124 @@
             </p>
           </section>
 
-          <!-- Grille Principale réordonnée (Draperie -> Table -> Déco) -->
-          <section
-            class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8"
-          >
-            <!-- 01. Draperie -->
+          <section class="max-w-6xl mx-auto px-6 flex flex-col gap-24">
             <div
-              class="group cursor-pointer overflow-hidden"
-              onclick="showCollection('draperie')"
+              class="flex flex-col md:flex-row items-center gap-12 md:gap-20"
             >
-              <div class="overflow-hidden bg-light aspect-[4/5]">
+              <div
+                class="w-full md:w-1/2 overflow-hidden bg-light aspect-square cursor-pointer group"
+                onclick="showCollection('draperie')"
+              >
                 <img
-                  src="../asset/photo/image/lit.jpeg"
+                  src="../asset/photo/image/lit_rouge_antique.jpeg"
                   alt="Draperie"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div class="py-4 flex flex-col gap-1">
-                <span class="text-xs text-[#c2593f] font-medium tracking-wider"
+              <div
+                class="w-full md:w-1/2 flex flex-col items-start justify-center"
+              >
+                <span
+                  class="text-xs text-[#C2593F] font-medium tracking-wider mb-2"
                   >01</span
                 >
-                <span class="font-serif text-xl tracking-wide"
-                  >Draperie d'Intérieur</span
+                <h2 class="font-serif text-3xl tracking-wide mb-4">
+                  Draperie d'Intérieur
+                </h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+                  Une gamme exclusive de linges de lit mariant délicatesse
+                  contemporaine et héritage culturel africain.
+                </p>
+                <button
+                  onclick="showCollection('draperie')"
+                  class="text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-3 px-8 border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium rounded-none cursor-pointer"
                 >
+                  Voir la collection
+                </button>
               </div>
             </div>
 
-            <!-- 02. Service de Table -->
             <div
-              class="group cursor-pointer overflow-hidden"
-              onclick="showCollection('table')"
+              class="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-20"
             >
-              <div class="overflow-hidden bg-light aspect-[4/5]">
+              <div
+                class="w-full md:w-1/2 flex flex-col items-start justify-center md:pl-12"
+              >
+                <span
+                  class="text-xs text-[#C2593F] font-medium tracking-wider mb-2"
+                  >02</span
+                >
+                <h2 class="font-serif text-3xl tracking-wide mb-4">
+                  Service de Table
+                </h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+                  Apportez une atmosphère chaleureuse et conviviale à vos
+                  tablées avec nos nappes et accessoires épurés.
+                </p>
+                <button
+                  onclick="showCollection('table')"
+                  class="text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-3 px-8 border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium rounded-none cursor-pointer"
+                >
+                  Voir la collection
+                </button>
+              </div>
+              <div
+                class="w-full md:w-1/2 overflow-hidden bg-light aspect-square cursor-pointer group"
+                onclick="showCollection('table')"
+              >
                 <img
-                  src="../asset/photo/image/service_de_table.jpeg"
+                  src="../asset/photo/image/service_rouge_antique.jpeg"
                   alt="Service de Table"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div class="py-4 flex flex-col gap-1">
-                <span class="text-xs text-[#c2593f] font-medium tracking-wider"
-                  >02</span
-                >
-                <span class="font-serif text-xl tracking-wide"
-                  >Service de Table</span
-                >
-              </div>
             </div>
 
-            <!-- 03. Décoration Intérieure -->
             <div
-              class="group cursor-pointer overflow-hidden"
-              onclick="showCollection('deco')"
+              class="flex flex-col md:flex-row items-center gap-12 md:gap-20"
             >
-              <div class="overflow-hidden bg-light aspect-[4/5]">
+              <div
+                class="w-full md:w-1/2 overflow-hidden bg-light aspect-square cursor-pointer group"
+                onclick="showCollection('deco')"
+              >
                 <img
                   src="../asset/photo/image/deco_interieur.jpeg"
                   alt="Décoration Intérieure"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
-              <div class="py-4 flex flex-col gap-1">
-                <span class="text-xs text-[#c2593f] font-medium tracking-wider"
+              <div
+                class="w-full md:w-1/2 flex flex-col items-start justify-center"
+              >
+                <span
+                  class="text-xs text-[#C2593F] font-medium tracking-wider mb-2"
                   >03</span
                 >
-                <span class="font-serif text-xl tracking-wide"
-                  >Décoration Intérieure</span
+                <h2 class="font-serif text-3xl tracking-wide mb-4">
+                  Décoration Intérieure
+                </h2>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
+                  Des objets d'art et accessoires aux lignes géométriques
+                  minimalistes pensés pour l'Afrique moderne.
+                </p>
+                <button
+                  onclick="showCollection('deco')"
+                  class="text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-3 px-8 border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium rounded-none cursor-pointer"
                 >
+                  Voir la collection
+                </button>
               </div>
             </div>
           </section>
         </div>
 
-        <!-- Vue Sous-Collections & Produits -->
         <div
           id="collection-page"
           class="hidden pt-[140px] pb-20 max-w-7xl mx-auto px-6"
         >
           <button
             onclick="showMain()"
-            class="text-xs uppercase tracking-widest flex items-center gap-2 text-gray-500 hover:text-dark transition-colors mb-12 cursor-pointer"
+            class="text-xs uppercase tracking-widest flex items-center gap-2 text-gray-500 hover:text-[#1a1a1a] transition-colors mb-12 cursor-pointer"
           >
             ← Retour aux catégories
           </button>
@@ -203,28 +243,26 @@
             class="font-serif text-3xl md:text-4xl font-light mb-12 border-b border-gray-100 pb-4"
           ></h2>
 
-          <!-- Les sections (Antique, Flora, etc.) vont s'injecter ici dynamiquement via le JS -->
           <div
             id="collection-sections-container"
             class="flex flex-col gap-20"
           ></div>
         </div>
 
-        <!-- Vue Fiche Produit Unique -->
         <div
           id="product-page"
           class="hidden pt-[140px] pb-20 max-w-7xl mx-auto px-6"
         >
           <button
             id="product-back-btn"
-            class="text-xs uppercase tracking-widest flex items-center gap-2 text-gray-500 hover:text-dark transition-colors mb-12 cursor-pointer"
+            class="text-xs uppercase tracking-widest flex items-center gap-2 text-gray-500 hover:text-[#1a1a1a] transition-colors mb-12 cursor-pointer"
           >
             ← Retour
           </button>
           <div id="product-content"></div>
         </div>
       </main>
-      <footer class="p-10 lg:p-14 text-center space-y-6">
+      <footer class="p-10 lg:p-14 text-center space-y-6 border border-gray-200">
         <div
           class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-20"
         >

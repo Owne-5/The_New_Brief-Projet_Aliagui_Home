@@ -54,29 +54,31 @@ html {
   border: solid 1px;
 }
 
-#nav-menu {
-  animation: appear 0.5s ease-in-out 1;
+/* Personnalisation fine de la sélection de texte */
+::selection {
+  background-color: #c2593f;
+  color: #ffffff;
 }
 
-#li-menu {
-  animation: fade 0.5s linear 5s 1;
+/* Ajustements pour les transitions fluides d'opacité (Hover des images) */
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
-@keyframes fade {
-  from {
-    color: 0%;
-  }
-  to {
-    width: 100%;
-  }
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
 }
 
-@keyframes appear {
-  from {
-    width: 0%;
-  }
-
-  to {
-    width: 321px;
-  }
+/* Rendre la barre de défilement plus discrète et moderne */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2593f;
 }

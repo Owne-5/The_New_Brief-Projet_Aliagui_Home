@@ -1,28 +1,34 @@
-function openMenu() {
-  document.getElementById("nav-menu").classList.remove("hidden");
-  document.getElementById("nav-menu").classList.add("flex");
-  document.getElementById("nav-menu").classList.add(`w-[${screen.width / 3}]`);
-  document.getElementById("nav-bar").classList.add("hidden");
-  if (screen.width >= 1024) {
-    document
-      .querySelectorAll("section")
-      .forEach((e) => e.classList.add("blur-[1px]"));
+// GESTION DU MENU HAMBURGER DEROULANT
+window.addEventListener("click", (e) => {
+  if (e.target.closest("li")?.id === "open-menu") {
+    const width = screen.width / 3;
 
-    document.querySelector("footer").classList.add("blur-[1px]");
+    if (screen.width < 1024) {
+      setTimeout(() => {
+        document.getElementById("nav-menu").style.width = "100%";
+        document.getElementById("nav-menu-close").style.width = "100%";
+        document.querySelector("header").style.height = "0px";
+      }, 1);
+    } else {
+      setTimeout(() => {
+        document.getElementById("nav-menu").style.width = `${width}px`;
+        document.getElementById("nav-menu-close").style.width = `${width}px`;
+        document.querySelector("header").style.height = `0px`;
+      }, 1);
+    }
   }
-}
+  if (e.target.id === "close") {
+    setTimeout(() => {
+      document.getElementById("nav-menu").style.width = "0%";
+    }, 1);
 
-function closeMenu() {
-  document.getElementById("nav-menu").classList.add("hidden");
-  document.getElementById("nav-menu").classList.remove("flex");
-  document.getElementById("nav-bar").classList.remove("hidden");
+    setTimeout(() => {
+      document.querySelector("header").style.height = "96px";
+    }, 999);
+  }
+});
 
-  document
-    .querySelectorAll("section")
-    .forEach((e) => e.classList.remove("blur-[1px]"));
-  document.querySelector("footer").classList.remove("blur-[1px]");
-}
-
+//GESTION DE LA TRANSPARENCE DE LA NAVBAR PRINCIPALE
 let lastScrollTop = 0;
 const header = document.getElementById("main-header");
 
@@ -58,6 +64,7 @@ window.addEventListener("click", (e) => {
   }
 });
 
+// GESTION DE L'AFFICHAGE DES PRODUITS POUR LA PAGE COLLECTION
 const categories = {
   draperie: {
     title: "Draperie d'Intérieur",
@@ -67,29 +74,29 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/macro_s1.jpeg",
+            image: "../asset/photo/image/lit_marron_antique.jpeg",
             title: "Drap Terre Antique",
-            price: "38 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Texture douce et finitions haut de gamme, inspirée des teintes subtiles d'argile africaine.",
           },
           {
-            image: "../asset/photo/image/macro_s2.jpeg",
+            image: "../asset/photo/image/lit_cercle_antique.jpeg",
             title: "Housse Antique Ocre",
-            price: "42 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Un raffinement intemporel mariant modernité et authenticité pour vos nuits.",
           },
           {
-            image: "../asset/photo/image/macro_s3.jpg",
+            image: "../asset/photo/image/lit_belge_adingra.jpeg",
             title: "Parure Sable Fin",
             price: "45 000 FCFA",
             description: "Élégance épurée en coton premium tissé délicatement.",
           },
           {
-            image: "../asset/photo/image/macro_s4.jpeg",
+            image: "../asset/photo/image/lit_rouge_antique.jpeg",
             title: "Drap Prestige d'Afrique",
-            price: "48 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Des motifs minimalistes et géométriques pour une chambre contemporaine.",
           },
@@ -100,48 +107,74 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/macro_s1.jpeg",
+            image: "../asset/photo/image/lit_rose_flora.jpeg",
             title: "Drap Flora Roseaux",
-            price: "40 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Motifs végétaux subtils évoquant la quiétude de la flore tropicale.",
           },
           {
-            image: "../asset/photo/image/macro_s2.jpeg",
+            image: "../asset/photo/image/lit_vert_flora.jpeg",
             title: "Parure Fleur de Coton",
-            price: "39 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Une douceur absolue mariée à un style épuré et lumineux.",
           },
           {
-            image: "../asset/photo/image/macro_s3.jpg",
+            image: "../asset/photo/image/lit_blanc_t_ivoire.jpeg",
             title: "Drap Liane Sacrée",
-            price: "43 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Un hommage d'une finesse rare à la nature majestueuse.",
           },
           {
-            image: "../asset/photo/image/macro_s4.jpeg",
+            image: "../asset/photo/image/lit_bleu_antique.jpeg",
             title: "Housse Écorce & Feuilles",
-            price: "41 000 FCFA",
+            price: "45 000 FCFA",
             description:
               "Nuances neutres et textures naturelles pour un équilibre visuel parfait.",
           },
         ],
       },
       {
-        name: "Collection Traditionnelle",
-        status: "sold_out", // Gère la rupture de stock demandée
+        name: "Collection Terre d'Ivoire",
+        status: "available",
         products: [
           {
-            image: "../asset/photo/image/macro_s2.jpeg",
+            image: "../asset/photo/image/macro_s3.jpg",
+            title: "Parure Ivoire Épurée",
+            price: "50 000 FCFA",
+            description:
+              "Savoir-faire unique mettant en valeur l'éclat et la pureté des lignes ivoiriennes.",
+          },
+        ],
+      },
+      {
+        name: "Collection Adingra",
+        status: "available",
+        products: [
+          {
+            image: "../asset/photo/image/lit_belge_adingra.jpeg",
+            title: "Drap Symboles Adingra",
+            price: "55 000 FCFA",
+            description:
+              "Subtile intégration de symboles chargés d'histoire pour un intérieur protecteur et élégant.",
+          },
+        ],
+      },
+      {
+        name: "Collection Traditionnelle",
+        status: "sold_out",
+        products: [
+          {
+            image: "../asset/photo/image/lit_cercle_antique.jpeg",
             title: "Drap Bogolan Luxe",
             price: "45 000 FCFA",
             description:
               "Un linge de lit d'exception fidèle aux codes graphiques du bogolan.",
           },
           {
-            image: "../asset/photo/image/macro_s4.jpeg",
+            image: "../asset/photo/image/macro_s2.jpeg",
             title: "Drap Héritage Royal",
             price: "52 000 FCFA",
             description:
@@ -159,11 +192,11 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/service_de_table.jpeg",
+            image: "../asset/photo/image/service_noir_antique.jpeg",
             title: "Nappe Lin Terracota",
             price: "25 000 FCFA",
             description:
-              "Apportez une atmosphère chaleureuse et profondément chaleureuse à vos tablées.",
+              "Apportez une atmosphère chaleureuse et profondément accueillante à vos tablées.",
           },
         ],
       },
@@ -193,10 +226,11 @@ let currentCategoryGlobal = "";
 
 function showCollection(categoryKey) {
   currentCategoryGlobal = categoryKey;
+  document.getElementById("new-collection").classList.remove("flex");
+  document.getElementById("new-collection").classList.add("hidden");
 
   document.getElementById("main-view").classList.add("hidden");
   document.getElementById("product-page").classList.add("hidden");
-  document.getElementById("new-collection").classList.add("hidden");
   document.getElementById("collection-page").classList.remove("hidden");
 
   const categoryData = categories[categoryKey];
@@ -209,14 +243,12 @@ function showCollection(categoryKey) {
   sectionsContainer.innerHTML = "";
 
   categoryData.sections.forEach((section, sectionIdx) => {
-    // Création du bloc de la sous-collection
     const sectionElement = document.createElement("div");
     sectionElement.classList.add("flex", "flex-col", "gap-6");
 
-    // En-tête de section avec badge rupture si applicable
     const isSoldOut = section.status === "sold_out";
     const badgeMarkup = isSoldOut
-      ? `<span class="text-[0.7rem] font-sans tracking-widest text-[#c2593f] border border-[#c2593f]/40 px-3 py-1 rounded-full uppercase font-medium">Rupture de stock</span>`
+      ? `<span class="text-[0.7rem] font-sans tracking-widest text-[#C2593F] border border-[#C2593F]/40 px-3 py-1 rounded-none uppercase font-medium">Rupture de stock</span>`
       : "";
 
     sectionElement.innerHTML = `
@@ -224,29 +256,25 @@ function showCollection(categoryKey) {
         <h3 class="font-serif text-2xl tracking-wide">${section.name}</h3>
         ${badgeMarkup}
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <!-- Les produits vont s'injecter ici -->
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"></div>
     `;
 
     const grid = sectionElement.querySelector(".grid");
 
     section.products.forEach((product, productIdx) => {
       const productCard = document.createElement("div");
-      // Si la section entière est en rupture, on applique une légère opacité générale
-      productCard.className = `group cursor-pointer ${isSoldOut ? "opacity-70" : ""}`;
+      productCard.className = `group cursor-pointer ${isSoldOut ? "opacity-60" : ""}`;
 
       productCard.innerHTML = `
         <div class="relative overflow-hidden bg-light aspect-[3/4] mb-3">
           <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-          <!-- Effet Hover "Voir le produit" -->
           <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
             <span class="text-white text-xs tracking-[0.25em] uppercase font-light">Voir le produit</span>
           </div>
         </div>
         <div class="flex flex-col gap-1 text-sm">
-          <h4 class="font-serif text-lg tracking-wide group-hover:text-[#c2593f] transition-colors text-gray-900">${product.title}</h4>
-          <span class="text-[#c2593f] font-medium">${product.price}</span>
+          <h4 class="font-serif text-lg tracking-wide group-hover:text-[#C2593F] transition-colors text-gray-900">${product.title}</h4>
+          <span class="text-[#C2593F] font-medium">${product.price}</span>
         </div>
       `;
 
@@ -257,6 +285,7 @@ function showCollection(categoryKey) {
 
     sectionsContainer.appendChild(sectionElement);
   });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function showProduct(categoryKey, sectionIdx, productIdx) {
@@ -268,22 +297,19 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
   document.getElementById("collection-page").classList.add("hidden");
   document.getElementById("product-page").classList.remove("hidden");
 
-  // Configuration dynamique du bouton retour de la fiche produit vers sa catégorie d'origine
   document.getElementById("product-back-btn").onclick = () =>
     showCollection(categoryKey);
 
-  // Rendu de la fiche produit
   const contentContainer = document.getElementById("product-content");
 
-  // Modification de l'état du CTA si rupture de stock
   const ctaMarkup = isSectionSoldOut
-    ? `<div class="text-center text-xs tracking-widest uppercase border border-gray-200 text-gray-400 py-4 px-8 cursor-not-allowed">
+    ? `<div class="text-center text-xs tracking-widest uppercase border border-gray-200 text-gray-400 py-4 px-8 rounded-none cursor-not-allowed">
          Actuellement indisponible
        </div>`
     : `<a 
-        href="https://wa.me/2250700000000?text=Bonjour%20Aliagui%20Home,%20je%20souhaite%20commander%20le%20produit%20:%20${encodeURIComponent(product.title)}"
+        href="https://wa.me/2250142789097?text=Bonjour%20Aliagui%20Home,%20je%20souhaite%20commander%20le%20produit%20:%20${encodeURIComponent(product.title)}"
         target="_blank"
-        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-black text-white py-4 px-8 border border-black hover:bg-white hover:text-black transition-all duration-400 font-medium"
+        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-4 px-8 rounded-none border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
        >
         Commander sur WhatsApp
        </a>`;
@@ -296,7 +322,7 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
       
       <div class="md:col-span-5 flex flex-col justify-center">
         <h2 class="font-serif text-3xl md:text-4xl tracking-wide text-gray-900 mb-4 font-light">${product.title}</h2>
-        <span class="text-xl text-[#c2593f] font-medium mb-6 block">${product.price}</span>
+        <span class="text-xl text-[#C2593F] font-medium mb-6 block">${product.price}</span>
         
         <hr class="border-gray-100 mb-6" />
         
@@ -310,10 +336,12 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
       </div>
     </div>  
   `;
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function showMain() {
   document.getElementById("new-collection").classList.remove("hidden");
+  document.getElementById("new-collection").classList.add("flex");
   document.getElementById("main-view").classList.remove("hidden");
   document.getElementById("collection-page").classList.add("hidden");
   document.getElementById("product-page").classList.add("hidden");
