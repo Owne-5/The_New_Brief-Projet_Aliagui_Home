@@ -23,50 +23,17 @@
   </head>
   <body>
     <div id="container">
-      <div
-        id="nav-menu"
-        class="w-full h-full lg:min-h-screen lg:w-95 bg-white z-1 fixed top-0 left-0 flex-col items-center py-10 hidden"
-      >
-        <div class="w-full flex flex-col gap-10">
-          <div class="flex justify-between items-center w-full gap-20 px-10">
-            <i class="fa-solid fa-x cursor-pointer" onclick="closeMenu()"></i>
-            <span
-              ><img
-                class="w-24 py-4"
-                src="../asset/photo/logo/AliaguiHomeSVG.svg"
-                alt="logo brand Aliagui Home"
-            /></span>
-          </div>
-          <ul
-            id="li-menu"
-            class="pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
-          >
-            <li><a href="../src/accueil.html">Acceuil</a></li>
-            <li><a href="../src/collection.html">Collection</a></li>
-            <li><a href="../src/histoire.html">Notre Histoire</a></li>
-            <li>
-              <button
-                class="uppercase p-2 cursor-pointer bg-[#895737] text-white transition-colors duration-200"
-              >
-                Nous Contacter
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
       <header
         id="main-header"
-        class="fixed bg-white top-0 left-0 w-full text-xl lg:text-xl z-50 text-black transition-transform duration-300 ease-in-out"
+        class="fixed bg-white top-0 left-0 w-full h-24 text-xl lg:text-xl z-50 text-black transition-all overflow-hidden"
       >
         <nav id="nav-bar" class="flex justify-between items-center h-24">
           <ul
             class="flex justify-between items-center w-full px-4 py-2 lg:px-9 lg:py-5"
           >
-            <li>
-              <span class="space-x-2 cursor-pointer" onclick="openMenu()"
-                ><i class="fa-solid fa-bars"></i>
-                <span class="hidden lg:inline">Menu</span>
-              </span>
+            <li id="open-menu" class="space-x-2 cursor-pointer">
+              <i class="fa-solid fa-bars"></i>
+              <span class="hidden lg:inline">Menu</span>
             </li>
             <li>
               <span
@@ -85,6 +52,39 @@
         </nav>
       </header>
       <main class="bg-white">
+        <!-- & -->
+        <div
+          id="nav-menu"
+          class="w-0 min-h-screen bg-white z-1 lg:shadow-black/20 shadow-sm fixed top-0 left-0 flex-col items-center py-10 overflow-hidden transition-[width] duration-1500"
+        >
+          <div id="nav-menu-close" class="w-full flex flex-col gap-10">
+            <div class="flex justify-between items-center gap-20 px-10">
+              <i id="close" class="fa-solid fa-x cursor-pointer p-5"></i>
+              <span
+                ><img
+                  class="w-24 py-4"
+                  src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                  alt="logo brand Aliagui Home"
+              /></span>
+            </div>
+            <ul
+              id="li-menu"
+              class="w-60 pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
+            >
+              <li><a href="../src/accueil.html">Acceuil</a></li>
+              <li><a href="../src/collection.html">Collection</a></li>
+              <li><a href="../src/histoire.html">Notre Histoire</a></li>
+              <li>
+                <button
+                  class="uppercase p-2 cursor-pointer bg-[#895737] text-white"
+                >
+                  Nous Contacter
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- & -->
         <!-- SECTION 1 -->
         <section
           class="flex items-center p-10 lg:items-end min-h-screen lg:p-28 sticky top-0 text-white"
