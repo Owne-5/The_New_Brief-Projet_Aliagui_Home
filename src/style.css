@@ -1,0 +1,82 @@
+* {
+  font-family: "suisse_light";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "canela";
+  src: url("../police/Canela-Regular-Trial.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "suisse_regular";
+  src: url("../police/SuisseIntl-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "suisse_light";
+  src: url("../police/SuisseIntl-Light.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title-h1 {
+  font-family: "canela";
+}
+
+#li-menu a {
+  position: relative;
+}
+
+#li-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+#li-menu a:hover::after {
+  width: 100%;
+  border: solid 1px;
+}
+
+#nav-menu {
+  animation: appear 0.5s ease-in-out 1;
+}
+
+#li-menu {
+  animation: fade 0.5s linear 5s 1;
+}
+
+@keyframes fade {
+  from {
+    color: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes appear {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 321px;
+  }
+}

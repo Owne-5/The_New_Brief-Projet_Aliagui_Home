@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Aliagui Home | Vente de draperie, de service table et de decoration d'interieur situer a Cocody Anono derriere le marché"
+    />
+    <script
+      async
+      defer
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+    ></script>
+    <script
+      async
+      defer
+      src="https://kit.fontawesome.com/2f46b7b8c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../src/style.css" />
+    <title>Aliagui Home | Accueil</title>
+  </head>
+  <body>
+    <div id="container">
+      <div
+        id="nav-menu"
+        class="w-full h-full lg:min-h-screen lg:w-95 bg-white z-1 fixed top-0 left-0 flex-col items-center py-10 hidden"
+      >
+        <div class="w-full flex flex-col gap-10">
+          <div class="flex justify-between items-center w-full gap-20 px-10">
+            <i class="fa-solid fa-x cursor-pointer" onclick="closeMenu()"></i>
+            <span
+              ><img
+                class="w-24 py-4"
+                src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                alt="logo brand Aliagui Home"
+            /></span>
+          </div>
+          <ul
+            id="li-menu"
+            class="pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
+          >
+            <li><a href="../src/accueil.html">Acceuil</a></li>
+            <li><a href="../src/collection.html">Collection</a></li>
+            <li><a href="../src/histoire.html">Notre Histoire</a></li>
+            <li>
+              <button
+                class="uppercase p-2 cursor-pointer bg-[#895737] text-white transition-colors duration-200"
+              >
+                Nous Contacter
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <header
+        id="main-header"
+        class="fixed bg-white top-0 left-0 w-full text-xl lg:text-xl z-50 text-black transition-transform duration-300 ease-in-out"
+      >
+        <nav id="nav-bar" class="flex justify-between items-center h-24">
+          <ul
+            class="flex justify-between items-center w-full px-4 py-2 lg:px-9 lg:py-5"
+          >
+            <li>
+              <span class="space-x-2 cursor-pointer" onclick="openMenu()"
+                ><i class="fa-solid fa-bars"></i>
+                <span class="hidden lg:inline">Menu</span>
+              </span>
+            </li>
+            <li>
+              <span
+                ><img
+                  class="w-24"
+                  src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                  alt="logo brand Aliagui Home"
+              /></span>
+            </li>
+            <li>
+              <span class="space-x-2">
+                <i class="fa-solid fa-magnifying-glass cursor-pointer"></i
+              ></span>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="bg-white">
+        <!-- SECTION 1 -->
+        <section
+          class="flex items-center p-10 lg:items-end min-h-screen lg:p-28 sticky top-0 text-white"
+        >
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute top-0 left-0 w-full min-h-screen object-cover scale-x-[1] -z-1"
+          >
+            <source src="../asset/video/fabriction.mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
+            <span class="font-bold text-2xl title-h1"
+              >Lorem ipsum dolor sit amet.</span
+            >
+            <div>
+              <p class="text-wrap">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint error facere cumque dignissimos odit dolor corporis magnam
+                quidem harum!
+              </p>
+            </div>
+            <button class="border border-white w-32 py-2 cursor-pointer">
+              En savoir plus
+            </button>
+          </div>
+        </section>
+        <!-- SECTION 2 -->
+
+        <section
+          class="flex items-center p-10 lg:items-end min-h-screen lg:p-28 sticky top-0 text-white"
+        >
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute top-0 left-0 w-full min-h-screen object-cover scale-x-[1] -z-1"
+          >
+            <source
+              src="../asset/video/Aliagui_Home_bedding_ritual_2026.mp4"
+              type="video/mp4"
+            />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
+            <span class="font-bold text-2xl title-h1"
+              >Lorem ipsum dolor sit amet.</span
+            >
+            <div>
+              <p class="text-wrap">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint error facere cumque dignissimos odit dolor corporis magnam
+                quidem harum!
+              </p>
+            </div>
+            <button class="border border-white w-32 py-2 cursor-pointer">
+              En savoir plus
+            </button>
+          </div>
+        </section>
+        <!-- SECTION 3 -->
+        <section
+          class="flex items-center p-10 lg:items-end min-h-screen lg:p-28 sticky top-0 text-white"
+        >
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute top-0 left-0 w-full min-h-screen object-cover scale-x-[1] -z-1"
+          >
+            <source
+              src="../asset/video/addidas_cinematic.mp4"
+              type="video/mp4"
+            />
+            Votre navigateur ne supporte pas la lecture de vidéos.
+          </video>
+          <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
+            <span class="font-bold text-2xl title-h1"
+              >Lorem ipsum dolor sit amet.</span
+            >
+            <div>
+              <p class="text-wrap">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint error facere cumque dignissimos odit dolor corporis magnam
+                quidem harum!
+              </p>
+            </div>
+            <button class="border border-white w-32 py-2 cursor-pointer">
+              En savoir plus
+            </button>
+          </div>
+        </section>
+        <!-- SECTION 4 -->
+
+        <section
+          class="min-h-screen bg-white flex flex-col lg:flex-row border border-gray-200 sticky"
+        >
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 lg:justify-center items-center"
+          >
+            <img src="../asset/photo/image/macro_s1.jpeg" alt="" />
+          </div>
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 justify-center lg:items-center"
+          >
+            <div
+              class="flex flex-col items-center text-center lg:text-start lg:items-start gap-5 lg:p-10"
+            >
+              <div class="flex flex-col gap-2">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span class="text-xl lg:text-2xl lg:w-3/5 title-h1"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  Quae.</span
+                >
+              </div>
+              <p class="w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis error odit soluta asperiores quo temporibus nulla
+                laudantium, harum nobis minima porro repellendus. Commodi omnis
+                consequuntur repellendus cum porro vel quaerat.
+              </p>
+              <button class="cursor-pointer border py-3 w-32">
+                Nos valeur
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- SECTION 5 -->
+        <section
+          class="min-h-screen bg-white flex flex-col-reverse lg:flex-row sticky"
+        >
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 justify-center lg:items-center"
+          >
+            <div
+              class="flex flex-col items-center text-center lg:text-start lg:items-start gap-5 lg:p-10"
+            >
+              <div class="flex flex-col gap-2">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span class="text-xl lg:text-2xl lg:w-3/5 title-h1"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  Quae.</span
+                >
+              </div>
+              <p class="w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis error odit soluta asperiores quo temporibus nulla
+                laudantium, harum nobis minima porro repellendus. Commodi omnis
+                consequuntur repellendus cum porro vel quaerat.
+              </p>
+              <button class="cursor-pointer border py-3 w-32">
+                Nos valeur
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 lg:justify-center items-center"
+          >
+            <img src="../asset/photo/image/macro_s4.jpeg" alt="" />
+          </div>
+        </section>
+        <!-- SECTION 6 -->
+        <section
+          class="min-h-screen lg:px-20 lg:py-[120px] bg-white border border-gray-200 flex justify-center items-center sticky"
+        >
+          <div>
+            <img
+              class="lg:hidden"
+              src="../asset/photo/image/lit_12x40.jpg"
+              alt=""
+            />
+            <img
+              class="hidden lg:block"
+              src="../asset/photo/image/lit_12x40.jpg"
+              alt=""
+            />
+          </div>
+        </section>
+        <!-- SECTION 7 -->
+        <section
+          class="flex items-center p-10 lg:items-end min-h-screen lg:p-28 bg-[url(../asset/photo/image/lit_fd.jpg)] bg-center sticky"
+        >
+          <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
+            <span class="font-bold text-2xl title-h1"
+              >Lorem ipsum dolor sit amet.</span
+            >
+            <div>
+              <p class="text-wrap">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                sint error facere cumque dignissimos odit dolor corporis magnam
+                quidem harum!
+              </p>
+            </div>
+            <button class="border border-black w-32 py-2 cursor-pointer">
+              En savoir plus
+            </button>
+          </div>
+        </section>
+        <!-- SECTION 8 -->
+        <section
+          class="min-h-screen bg-white flex flex-col-reverse lg:flex-row border border-gray-200 sticky"
+        >
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 justify-center lg:items-center"
+          >
+            <div
+              class="flex flex-col items-center text-center lg:text-start lg:items-start gap-5 lg:p-10"
+            >
+              <div class="flex flex-col gap-2">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span class="text-xl lg:text-2xl lg:w-3/5 title-h1"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  Quae.</span
+                >
+              </div>
+              <p class="w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis error odit soluta asperiores quo temporibus nulla
+                laudantium, harum nobis minima porro repellendus. Commodi omnis
+                consequuntur repellendus cum porro vel quaerat.
+              </p>
+              <button class="cursor-pointer border py-3 w-32">
+                Nos valeur
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 lg:justify-center items-center"
+          >
+            <img src="../asset/photo/image/service_cl.jpg" alt="" />
+          </div>
+        </section>
+        <!-- SECTION 9 -->
+
+        <section
+          class="min-h-screen bg-white flex flex-col lg:flex-row border border-gray-200 sticky"
+        >
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 lg:justify-center items-center"
+          >
+            <img src="../asset/photo/image/showroom_pl.jpg" alt="" />
+          </div>
+          <div
+            class="flex lg:min-h-screen lg:w-1/2 p-10 justify-center lg:items-center"
+          >
+            <div
+              class="flex flex-col items-center text-center lg:text-start lg:items-start gap-5 lg:p-10"
+            >
+              <div class="flex flex-col gap-2">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span class="text-xl lg:text-2xl lg:w-3/5 title-h1"
+                  >Lorem ipsum dolor, sit amet consectetur adipisicing.
+                  Quae.</span
+                >
+              </div>
+              <p class="w-full">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Veritatis error odit soluta asperiores quo temporibus nulla
+                laudantium, harum nobis minima porro repellendus. Commodi omnis
+                consequuntur repellendus cum porro vel quaerat.
+              </p>
+              <button class="cursor-pointer border py-3 w-32">
+                Nos valeur
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="p-10 lg:p-14 text-center space-y-6 sticky bg-white">
+        <div
+          class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-20"
+        >
+          <div class="w-full lg:w-1/2">
+            <div
+              class="flex flex-col-reverse lg:flex-col gap-10 items-center lg:items-start"
+            >
+              <div class="flex flex-col gap-2">
+                <span>Nos reseaux sociaux</span>
+                <span class="text-2xl space-x-2">
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"> <i class="fa-brands fa-tiktok"></i></a>
+                  <a href="#"> <i class="fa-brands fa-whatsapp"></i></a>
+                </span>
+              </div>
+              <img
+                class="w-36"
+                src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div
+              class="h-full flex flex-col lg:flex-row justify-end items-center gap-5 lg:gap-32"
+            >
+              <div
+                class="flex flex-col lg:pt-10 items-center lg:items-start gap-5"
+              >
+                <span>Mention Legal</span>
+                <span>Declaration de confidentialite</span>
+              </div>
+              <div class="flex flex-col items-start gap-4">
+                <span>Information supplementaire</span>
+                <span>Adresse: Cimetiere d'Anono</span>
+                <span>Horraire: 08H00 - 16H30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p>&copy;Copyright 2026 - Aliagui Home</p>
+      </footer>
+    </div>
+    <script async defer src="../src/script.js"></script>
+  </body>
+</html>
