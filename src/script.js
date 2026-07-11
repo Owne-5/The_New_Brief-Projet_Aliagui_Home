@@ -253,7 +253,7 @@ function showCollection(categoryKey) {
 
     sectionElement.innerHTML = `
       <div class="flex items-center gap-4 flex-wrap">
-        <h3 class="font-serif text-2xl tracking-wide">${section.name}</h3>
+        <h3 class="font-serif text-2xl tracking-wide title-h1">${section.name}</h3>
         ${badgeMarkup}
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6"></div>
@@ -267,7 +267,7 @@ function showCollection(categoryKey) {
 
       productCard.innerHTML = `
         <div class="relative overflow-hidden bg-light aspect-[3/4] mb-3">
-          <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+          <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
           <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
             <span class="text-white text-xs tracking-[0.25em] uppercase font-light">Voir le produit</span>
           </div>
@@ -307,21 +307,20 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
          Actuellement indisponible
        </div>`
     : `<a 
-        href="https://wa.me/2250142789097?text=Bonjour%20Aliagui%20Home,%20je%20souhaite%20commander%20le%20produit%20:%20${encodeURIComponent(product.title)}"
+        href="https://wa.me/2250142789097?text=Je%20voudrais%20plus%20de%20détail%20sur%20le%20produit%20:%20${encodeURIComponent(product.title)}"
         target="_blank"
         class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-4 px-8 rounded-none border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
        >
         Commander sur WhatsApp
        </a>`;
-
   contentContainer.innerHTML = `
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center">
       <div class="md:col-span-7 bg-light aspect-[4/5] md:h-[650px] overflow-hidden">
-        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover">
+        <img src="${product.image}" alt="${product.title}" class="w-full h-full object-cover" loading="lazy">
       </div>
       
       <div class="md:col-span-5 flex flex-col justify-center">
-        <h2 class="font-serif text-3xl md:text-4xl tracking-wide text-gray-900 mb-4 font-light">${product.title}</h2>
+        <h2 class="font-serif text-3xl md:text-4xl tracking-wide text-gray-900 mb-4 font-light title-h1">${product.title}</h2>
         <span class="text-xl text-[#C2593F] font-medium mb-6 block">${product.price}</span>
         
         <hr class="border-gray-100 mb-6" />
