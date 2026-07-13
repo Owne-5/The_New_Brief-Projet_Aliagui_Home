@@ -31,6 +31,7 @@ window.addEventListener("click", (e) => {
 
   if (e.target.id === "search-btn") {
     document.getElementById("search-menu").removeAttribute("style");
+    document.querySelector("header").classList.remove("text-white");
     document.querySelector("header").classList.add("text-black");
     document.getElementById("search-menu").classList.toggle("h-64");
     document.getElementById("search-input").value = "";
@@ -360,5 +361,5 @@ function showMain() {
 
 window.addEventListener("change", (e) => {
   const inputValue = document.getElementById("search-input").value;
-  window.location.href = "../src/collection.html";
+  window.location.href = "../docs/collection.html";
 });
