@@ -8,7 +8,7 @@ html {
 
 @font-face {
   font-family: "canela";
-  src: url("/police/Canela-Regular-Trial.woff2") format("woff2");
+  src: url("police/Canela-Regular-Trial.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@ html {
 
 @font-face {
   font-family: "suisse_regular";
-  src: url("/police/SuisseIntl-Regular.woff2") format("woff2");
+  src: url("police/SuisseIntl-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@ html {
 
 @font-face {
   font-family: "suisse_light";
-  src: url("/police/SuisseIntl-Light.woff2") format("woff2");
+  src: url("police/SuisseIntl-Light.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
