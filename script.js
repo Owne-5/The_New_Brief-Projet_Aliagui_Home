@@ -86,27 +86,27 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/lit_marron_antique.jpeg",
+            image: "/asset/photo/image/lit_marron_antique.jpeg",
             title: "Drap Terre Antique",
             price: "45 000 FCFA",
             description:
               "Texture douce et finitions haut de gamme, inspirée des teintes subtiles d'argile africaine.",
           },
           {
-            image: "../asset/photo/image/lit_cercle_antique.jpeg",
+            image: "/asset/photo/image/lit_cercle_antique.jpeg",
             title: "Housse Antique Ocre",
             price: "45 000 FCFA",
             description:
               "Un raffinement intemporel mariant modernité et authenticité pour vos nuits.",
           },
           {
-            image: "../asset/photo/image/lit_belge_adingra.jpeg",
+            image: "/asset/photo/image/lit_belge_adingra.jpeg",
             title: "Parure Sable Fin",
             price: "45 000 FCFA",
             description: "Élégance épurée en coton premium tissé délicatement.",
           },
           {
-            image: "../asset/photo/image/lit_rouge_antique.jpeg",
+            image: "/asset/photo/image/lit_rouge_antique.jpeg",
             title: "Drap Prestige d'Afrique",
             price: "45 000 FCFA",
             description:
@@ -119,28 +119,28 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/lit_rose_flora.jpeg",
+            image: "/asset/photo/image/lit_rose_flora.jpeg",
             title: "Drap Flora Roseaux",
             price: "45 000 FCFA",
             description:
               "Motifs végétaux subtils évoquant la quiétude de la flore tropicale.",
           },
           {
-            image: "../asset/photo/image/lit_vert_flora.jpeg",
+            image: "/asset/photo/image/lit_vert_flora.jpeg",
             title: "Parure Fleur de Coton",
             price: "45 000 FCFA",
             description:
               "Une douceur absolue mariée à un style épuré et lumineux.",
           },
           {
-            image: "../asset/photo/image/lit_blanc_t_ivoire.jpeg",
+            image: "/asset/photo/image/lit_blanc_t_ivoire.jpeg",
             title: "Drap Liane Sacrée",
             price: "45 000 FCFA",
             description:
               "Un hommage d'une finesse rare à la nature majestueuse.",
           },
           {
-            image: "../asset/photo/image/lit_bleu_antique.jpeg",
+            image: "/asset/photo/image/lit_bleu_antique.jpeg",
             title: "Housse Écorce & Feuilles",
             price: "45 000 FCFA",
             description:
@@ -153,7 +153,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/macro_s3.jpg",
+            image: "/asset/photo/image/macro_s3.jpg",
             title: "Parure Ivoire Épurée",
             price: "50 000 FCFA",
             description:
@@ -166,7 +166,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/lit_belge_adingra.jpeg",
+            image: "/asset/photo/image/lit_belge_adingra.jpeg",
             title: "Drap Symboles Adingra",
             price: "55 000 FCFA",
             description:
@@ -179,14 +179,14 @@ const categories = {
         status: "sold_out",
         products: [
           {
-            image: "../asset/photo/image/lit_cercle_antique.jpeg",
+            image: "/asset/photo/image/lit_cercle_antique.jpeg",
             title: "Drap Bogolan Luxe",
             price: "45 000 FCFA",
             description:
               "Un linge de lit d'exception fidèle aux codes graphiques du bogolan.",
           },
           {
-            image: "../asset/photo/image/macro_s2.jpeg",
+            image: "/asset/photo/image/macro_s2.jpeg",
             title: "Drap Héritage Royal",
             price: "52 000 FCFA",
             description:
@@ -204,7 +204,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/service_noir_antique.jpeg",
+            image: "/asset/photo/image/service_noir_antique.jpeg",
             title: "Nappe Lin Terracota",
             price: "25 000 FCFA",
             description:
@@ -222,7 +222,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "../asset/photo/image/deco_interieur.jpeg",
+            image: "/asset/photo/image/deco_interieur.jpeg",
             title: "Vase Signature",
             price: "18 000 FCFA",
             description:
@@ -361,5 +361,5 @@ function showMain() {
 
 window.addEventListener("change", (e) => {
   const inputValue = document.getElementById("search-input").value;
-  window.location.href = "../docs/collection.html";
+  window.location.href = "/docs/collection.html";
 });

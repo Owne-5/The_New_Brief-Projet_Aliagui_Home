@@ -18,7 +18,7 @@
       src="https://kit.fontawesome.com/2f46b7b8c4.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="../docs/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Aliagui Home | Collection</title>
   </head>
   <body>
@@ -39,7 +39,7 @@
               <span
                 ><img
                   class="w-24"
-                  src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                  src="/asset/photo/logo/AliaguiHomeSVG.svg"
                   alt="logo brand Aliagui Home"
                   loading="lazy"
               /></span>
@@ -67,7 +67,7 @@
               <span
                 ><img
                   class="w-24 py-4"
-                  src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                  src="/asset/photo/logo/AliaguiHomeSVG.svg"
                   alt="logo brand Aliagui Home"
                   loading="lazy"
               /></span>
@@ -76,9 +76,9 @@
               id="li-menu"
               class="w-60 pl-10 text-xl lg:text-base flex flex-col gap-5 lg:gap-5 uppercase"
             >
-              <li><a href="../docs/accueil.html">Acceuil</a></li>
-              <li><a href="../docs/collection.html">Collection</a></li>
-              <li><a href="../docs/histoire.html">Notre Histoire</a></li>
+              <li><a href="accueil.html">Acceuil</a></li>
+              <li><a href="collection.html">Collection</a></li>
+              <li><a href="histoire.html">Notre Histoire</a></li>
               <li>
                 <button
                   class="uppercase p-2 cursor-pointer bg-[#895737] text-white"
@@ -104,7 +104,7 @@
         <!-- & -->
         <section
           id="new-collection"
-          class="flex items-center p-10 lg:items-end lg:justify-center min-h-screen lg:p-28 bg-[url(../asset/photo/image/new_coll.jpeg)] bg-center text-white"
+          class="flex items-center p-10 lg:items-end lg:justify-center min-h-screen lg:p-28 bg-[url(/asset/photo/image/new_coll.jpeg)] bg-center text-white"
         >
           <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
             <span class="font-bold text-2xl lg:text-center title-h1"
@@ -144,7 +144,7 @@
                 onclick="showCollection('draperie')"
               >
                 <img
-                  src="../asset/photo/image/lit_rouge_antique.jpeg"
+                  src="/asset/photo/image/lit_rouge_antique.jpeg"
                   alt="Draperie"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -202,7 +202,7 @@
                 onclick="showCollection('table')"
               >
                 <img
-                  src="../asset/photo/image/service_rouge_antique.jpeg"
+                  src="/asset/photo/image/service_rouge_antique.jpeg"
                   alt="Service de Table"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -218,7 +218,7 @@
                 onclick="showCollection('deco')"
               >
                 <img
-                  src="../asset/photo/image/deco_interieur.jpeg"
+                  src="/asset/photo/image/deco_interieur.jpeg"
                   alt="Décoration Intérieure"
                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
@@ -284,7 +284,7 @@
           <div id="product-content"></div>
         </div>
       </main>
-      <footer class="p-10 lg:p-14 text-center space-y-6 border border-gray-200">
+      <footer class="p-10 lg:p-14 text-center space-y-6 sticky bg-white">
         <div
           class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-20"
         >
@@ -296,14 +296,21 @@
                 <span>Nos reseaux sociaux</span>
                 <span class="text-2xl space-x-2">
                   <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="#"> <i class="fa-brands fa-tiktok"></i></a>
+                  <a href="https://www.facebook.com/Sublimeroum" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://www.tiktok.com/@sublimeroom?is_from_webapp=1&sender_device=pc"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-tiktok"></i
+                  ></a>
                   <a href="#"> <i class="fa-brands fa-whatsapp"></i></a>
                 </span>
               </div>
               <img
                 class="w-36"
-                src="../asset/photo/logo/AliaguiHomeSVG.svg"
+                src="/asset/photo/logo/AliaguiHomeSVG.svg"
                 alt=""
                 loading="lazy"
               />
@@ -313,9 +320,7 @@
             <div
               class="h-full flex flex-col lg:flex-row justify-end items-center gap-5 lg:gap-32"
             >
-              <div
-                class="flex flex-col lg:pt-10 items-center lg:items-start gap-5"
-              >
+              <div class="flex flex-col items-center lg:items-start gap-2">
                 <span>Mention Legal</span>
                 <span>Declaration de confidentialite</span>
               </div>
@@ -327,9 +332,9 @@
             </div>
           </div>
         </div>
-        <p>&copy; Copyright 2026 - Aliagui Home</p>
+        <p>&copy; Aliagui Home - Tous droits réservés</p>
       </footer>
     </div>
-    <script async defer src="../docs/script.js"></script>
+    <script async defer src="script.js"></script>
   </body>
 </html>
