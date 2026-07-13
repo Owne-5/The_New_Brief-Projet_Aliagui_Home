@@ -11,9 +11,11 @@ window.addEventListener("click", (e) => {
       }, 1);
     } else {
       setTimeout(() => {
+        document.getElementById("search-menu").style.height = "0px";
+        document.getElementById("search-input").value = "";
         document.getElementById("nav-menu").style.width = `${width}px`;
         document.getElementById("nav-menu-close").style.width = `${width}px`;
-        document.querySelector("header").style.height = `0px`;
+        document.querySelector("header").style.height = "0px";
       }, 1);
     }
   }
@@ -25,6 +27,13 @@ window.addEventListener("click", (e) => {
     setTimeout(() => {
       document.querySelector("header").style.height = "96px";
     }, 999);
+  }
+
+  if (e.target.id === "search-btn") {
+    document.getElementById("search-menu").removeAttribute("style");
+    document.querySelector("header").classList.add("text-black");
+    document.getElementById("search-menu").classList.toggle("h-64");
+    document.getElementById("search-input").value = "";
   }
 });
 
@@ -40,9 +49,11 @@ window.addEventListener("scroll", () => {
 
   if (currentScroll > hauteurSection1) {
     header.classList.remove("bg-transparent", "text-white");
-    header.classList.add("bg-white", "text-black", "shadow-md");
+    header.classList.add("bg-white", "text-black");
+    // , "shadow-md"
   } else {
-    header.classList.remove("bg-white", "text-black", "shadow-md");
+    header.classList.remove("bg-white", "text-black");
+    // , "shadow-md"
     header.classList.add("bg-transparent", "text-white");
   }
 
@@ -309,7 +320,7 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
     : `<a 
         href="https://wa.me/2250142789097?text=Je%20voudrais%20plus%20de%20détail%20sur%20le%20produit%20:%20${encodeURIComponent(product.title)}"
         target="_blank"
-        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#1a1a1a] text-white py-4 px-8 rounded-none border border-[#1a1a1a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
+        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#C2593F] text-white py-4 px-8 rounded-none border border-[#C2593F] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
        >
         Commander sur WhatsApp
        </a>`;
@@ -346,3 +357,8 @@ function showMain() {
   document.getElementById("product-page").classList.add("hidden");
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+window.addEventListener("change", (e) => {
+  const inputValue = document.getElementById("search-input").value;
+  window.location.href = "../src/collection.html";
+});
