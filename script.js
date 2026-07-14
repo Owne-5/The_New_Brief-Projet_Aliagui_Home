@@ -36,6 +36,15 @@ window.addEventListener("click", (e) => {
     document.getElementById("search-menu").classList.toggle("h-64");
     document.getElementById("search-input").value = "";
   }
+
+  if (e.target.id === "submit") {
+    e.preventDefault();
+    document.getElementById("nom").value = "";
+    document.getElementById("prenom").value = "";
+    document.getElementById("mail").value = "";
+    document.getElementById("contact").value = "";
+    document.getElementById("message").value = "";
+  }
 });
 
 //GESTION DE LA TRANSPARENCE DE LA NAVBAR PRINCIPALE
@@ -86,27 +95,27 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/lit_marron_antique.jpeg",
+            image: "asset/photo/image/lit_marron_antique.avif",
             title: "Drap Terre Antique",
             price: "45 000 FCFA",
             description:
               "Texture douce et finitions haut de gamme, inspirée des teintes subtiles d'argile africaine.",
           },
           {
-            image: "asset/photo/image/lit_cercle_antique.jpeg",
+            image: "asset/photo/image/lit_cercle_antique.avif",
             title: "Housse Antique Ocre",
             price: "45 000 FCFA",
             description:
               "Un raffinement intemporel mariant modernité et authenticité pour vos nuits.",
           },
           {
-            image: "asset/photo/image/lit_belge_adingra.jpeg",
+            image: "asset/photo/image/lit_belge_adingra.avif",
             title: "Parure Sable Fin",
             price: "45 000 FCFA",
             description: "Élégance épurée en coton premium tissé délicatement.",
           },
           {
-            image: "asset/photo/image/lit_rouge_antique.jpeg",
+            image: "asset/photo/image/lit_rouge_antique.avif",
             title: "Drap Prestige d'Afrique",
             price: "45 000 FCFA",
             description:
@@ -119,28 +128,28 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/lit_rose_flora.jpeg",
+            image: "asset/photo/image/lit_rose_flora.avif",
             title: "Drap Flora Roseaux",
             price: "45 000 FCFA",
             description:
               "Motifs végétaux subtils évoquant la quiétude de la flore tropicale.",
           },
           {
-            image: "asset/photo/image/lit_vert_flora.jpeg",
+            image: "asset/photo/image/lit_vert_flora.avif",
             title: "Parure Fleur de Coton",
             price: "45 000 FCFA",
             description:
               "Une douceur absolue mariée à un style épuré et lumineux.",
           },
           {
-            image: "asset/photo/image/lit_blanc_t_ivoire.jpeg",
+            image: "asset/photo/image/lit_blanc_t_ivoire.avif",
             title: "Drap Liane Sacrée",
             price: "45 000 FCFA",
             description:
               "Un hommage d'une finesse rare à la nature majestueuse.",
           },
           {
-            image: "asset/photo/image/lit_bleu_antique.jpeg",
+            image: "asset/photo/image/lit_bleu_antique.avif",
             title: "Housse Écorce & Feuilles",
             price: "45 000 FCFA",
             description:
@@ -153,7 +162,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/macro_s3.jpg",
+            image: "asset/photo/image/macro_s3.avif",
             title: "Parure Ivoire Épurée",
             price: "50 000 FCFA",
             description:
@@ -166,7 +175,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/lit_belge_adingra.jpeg",
+            image: "asset/photo/image/lit_belge_adingra.avif",
             title: "Drap Symboles Adingra",
             price: "55 000 FCFA",
             description:
@@ -179,14 +188,14 @@ const categories = {
         status: "sold_out",
         products: [
           {
-            image: "asset/photo/image/lit_cercle_antique.jpeg",
+            image: "asset/photo/image/lit_cercle_antique.avif",
             title: "Drap Bogolan Luxe",
             price: "45 000 FCFA",
             description:
               "Un linge de lit d'exception fidèle aux codes graphiques du bogolan.",
           },
           {
-            image: "asset/photo/image/macro_s2.jpeg",
+            image: "asset/photo/image/macro_s2.avif",
             title: "Drap Héritage Royal",
             price: "52 000 FCFA",
             description:
@@ -204,7 +213,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/service_noir_antique.jpeg",
+            image: "asset/photo/image/service_noir_antique.avif",
             title: "Nappe Lin Terracota",
             price: "25 000 FCFA",
             description:
@@ -222,7 +231,7 @@ const categories = {
         status: "available",
         products: [
           {
-            image: "asset/photo/image/deco_interieur.jpeg",
+            image: "asset/photo/image/deco_interieur.avif",
             title: "Vase Signature",
             price: "18 000 FCFA",
             description:
@@ -260,7 +269,7 @@ function showCollection(categoryKey) {
 
     const isSoldOut = section.status === "sold_out";
     const badgeMarkup = isSoldOut
-      ? `<span class="text-[0.7rem] font-sans tracking-widest text-[#C2593F] border border-[#C2593F]/40 px-3 py-1 rounded-none uppercase font-medium">Rupture de stock</span>`
+      ? `<span class="text-[0.7rem] font-sans tracking-widest text-[#c55d3a] border border-[#c55d3a]/40 px-3 py-1 rounded-none uppercase font-medium">Rupture de stock</span>`
       : "";
 
     sectionElement.innerHTML = `
@@ -285,8 +294,8 @@ function showCollection(categoryKey) {
           </div>
         </div>
         <div class="flex flex-col gap-1 text-sm">
-          <h4 class="font-serif text-lg tracking-wide group-hover:text-[#C2593F] transition-colors text-gray-900">${product.title}</h4>
-          <span class="text-[#C2593F] font-medium">${product.price}</span>
+          <h4 class="font-serif text-lg tracking-wide group-hover:text-[#c55d3a] transition-colors text-gray-900">${product.title}</h4>
+          <span class="text-[#c55d3a] font-medium">${product.price}</span>
         </div>
       `;
 
@@ -321,7 +330,7 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
     : `<a 
         href="https://wa.me/2250142789097?text=Je%20voudrais%20plus%20de%20détail%20sur%20le%20produit%20:%20${encodeURIComponent(product.title)}"
         target="_blank"
-        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#C2593F] text-white py-4 px-8 rounded-none border border-[#C2593F] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
+        class="inline-block text-center text-xs uppercase tracking-[0.2em] bg-[#c55d3a] text-white py-4 px-8 rounded-none border border-[#c55d3a] hover:bg-white hover:text-[#1a1a1a] transition-all duration-400 font-medium"
        >
         Commander sur WhatsApp
        </a>`;
@@ -333,7 +342,7 @@ function showProduct(categoryKey, sectionIdx, productIdx) {
       
       <div class="md:col-span-5 flex flex-col justify-center">
         <h2 class="font-serif text-3xl md:text-4xl tracking-wide text-gray-900 mb-4 font-light title-h1">${product.title}</h2>
-        <span class="text-xl text-[#C2593F] font-medium mb-6 block">${product.price}</span>
+        <span class="text-xl text-[#c55d3a] font-medium mb-6 block">${product.price}</span>
         
         <hr class="border-gray-100 mb-6" />
         
@@ -359,7 +368,19 @@ function showMain() {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-window.addEventListener("change", (e) => {
-  const inputValue = document.getElementById("search-input").value;
-  window.location.href = "/docs/collection.html";
+window.addEventListener("keypress", (e) => {
+  const searchBox = ["accueil", "collection", "histoire"];
+  const searchInput = document.getElementById("search-input");
+  if (e.target.id === "search-input") {
+    if (searchInput !== "" && e.key === "Enter") {
+      let table = searchBox.filter((val) =>
+        val.includes(searchInput.value.trim().toLowerCase()),
+      );
+      if (table[0] === "accueil") {
+        window.location.href = "index.html";
+      } else {
+        window.location.href = `${table[0]}.html`;
+      }
+    }
+  }
 });

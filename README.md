@@ -18,8 +18,6 @@ Aié Marie Manuella — 1re Année Bachelor Dev. Web
 
 Ndong Owone Ndong Charles — 1re Année Bachelor Dev. Web
 
-## Arborescence du site
-
 ## Technologies
 
 - HTML 5

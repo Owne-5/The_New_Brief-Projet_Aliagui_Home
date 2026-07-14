@@ -34,11 +34,11 @@ html {
   font-family: "canela";
 }
 
-#li-menu a {
+.line {
   position: relative;
 }
 
-#li-menu a::after {
+.line::after {
   content: "";
   position: absolute;
   width: 0%;
@@ -49,14 +49,14 @@ html {
   transition: width 0.3s ease-in-out;
 }
 
-#li-menu a:hover::after {
+.line:hover::after {
   width: 100%;
   border: solid 1px;
 }
 
 /* Personnalisation fine de la sélection de texte */
 ::selection {
-  background-color: #c2593f;
+  background-color: #c55d3a;
   color: #ffffff;
 }
 
@@ -80,5 +80,5 @@ html {
   background: #1a1a1a;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c2593f;
+  background: #c55d3a;
 }
