@@ -96,6 +96,7 @@
           id="search-menu"
           class="flex justify-center items-end w-full h-0 bg-white z-1 lg:shadow-black/20 shadow-sm fixed top-0 left-0 overflow-hidden transition-[height] duration-700"
         >
+          <span id="msg" class="absolute p-2 text-[#c55d3a] hidden"></span>
           <input
             id="search-input"
             type="text"
@@ -175,7 +176,7 @@
           class="min-h-screen p-10 lg:px-28 bg-white border border-gray-200 flex flex-col justify-center items-center gap-32"
         >
           <div
-            class="flex flex-col-reverse lg:flex-row lg:justify-between items-center lg:gap-20 w-full"
+            class="flex flex-col lg:flex-row lg:justify-between items-center lg:gap-20 w-full"
           >
             <img
               src="asset/photo/image/drap_design.avif"
@@ -205,11 +206,13 @@
               >
                 <a
                   href="collection.html"
-                  class="cursor-pointer border p-2 px-6"
+                  class="cursor-pointer border w-fit p-2 text-sm lg:text-base"
                 >
                   Voir le savoir-faire en collection
                 </a>
-                <button class="cursor-pointer border p-1 w-32">
+                <button
+                  class="cursor-pointer border w-fit p-2 text-sm lg:text-base"
+                >
                   Nos valeur
                 </button>
               </div>
@@ -221,7 +224,7 @@
           class="min-h-screen p-10 lg:px-28 bg-white flex border border-gray-200 flex-col justify-center items-center gap-32"
         >
           <div
-            class="flex flex-col lg:flex-row justify-between items-center lg:gap-40 w-full"
+            class="flex flex-col-reverse lg:flex-row justify-between items-center lg:gap-40 w-full"
           >
             <div
               class="flex flex-col gap-5 py-10 text-center lg:text-start items-center lg:items-start w-full lg:w-2/5"
@@ -259,7 +262,7 @@
       </main>
       <footer class="p-10 lg:p-14 text-center space-y-6 sticky bg-white">
         <div
-          class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-20"
+          class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-5 lg:gap-20"
         >
           <div class="w-full lg:w-1/2">
             <div
@@ -296,9 +299,9 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2">
+          <div class="w-full lg:w-1/2 lg:mt-10">
             <div
-              class="h-full flex flex-col lg:flex-row justify-end items-center lg:items-start gap-5 lg:gap-32"
+              class="h-full flex flex-col lg:flex-row justify-end items-center lg:items-start gap-10 lg:gap-32"
             >
               <div class="flex flex-col items-center lg:items-start gap-2">
                 <span class="text-sm">Livraison</span>
@@ -306,7 +309,7 @@
                 <span class="text-sm">Mention Légal</span>
                 <span class="text-sm">Déclaration de confidentialité</span>
               </div>
-              <div class="flex flex-col lg:items-start lg:gap-10">
+              <div class="flex flex-col lg:items-start gap-5 lg:gap-2">
                 <div class="flex flex-col items-center lg:items-start gap-2">
                   <span class="text-sm">Riviera Anono, Cocody, Abidjan</span>
                   <span class="text-sm">Lun - Sam : 08h00 - 16h30</span>
@@ -321,11 +324,9 @@
                     <a href="histoire.html">Histoire</a>
                   </nav>
                 </div>
-                <img
-                  src="asset/photo/logo/TNB.avif"
-                  alt="image du logo de l'agence The New Brief"
-                  class="w-50"
-                />
+                <span class="text-xs italic text-gray-400"
+                  >Made by a new Gens vision</span
+                >
               </div>
             </div>
           </div>

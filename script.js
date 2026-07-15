@@ -47,44 +47,6 @@ window.addEventListener("click", (e) => {
   }
 });
 
-//GESTION DE LA TRANSPARENCE DE LA NAVBAR PRINCIPALE
-let lastScrollTop = 0;
-const header = document.getElementById("main-header");
-
-window.addEventListener("scroll", () => {
-  let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  if (currentScroll < 0) currentScroll = 0;
-
-  const hauteurSection1 = window.innerHeight - 96;
-
-  if (currentScroll > hauteurSection1) {
-    header.classList.remove("bg-transparent", "text-white");
-    header.classList.add("bg-white", "text-black");
-    // , "shadow-md"
-  } else {
-    header.classList.remove("bg-white", "text-black");
-    // , "shadow-md"
-    header.classList.add("bg-transparent", "text-white");
-  }
-
-  if (currentScroll > lastScrollTop && currentScroll > window.innerHeight) {
-    header.classList.add("-translate-y-full");
-  } else {
-    header.classList.remove("-translate-y-full");
-  }
-
-  lastScrollTop = currentScroll;
-});
-
-window.addEventListener("click", (e) => {
-  const hasGoodId = String(e.target.id).includes("collec-atlantique");
-  if (hasGoodId) {
-    document.getElementById("section-container").classList.add("hidden");
-    document.getElementById("product-section").classList.add("flex");
-    document.getElementById("product-section").classList.remove("hidden");
-  }
-});
-
 // GESTION DE L'AFFICHAGE DES PRODUITS POUR LA PAGE COLLECTION
 const categories = {
   draperie: {
@@ -369,17 +331,48 @@ function showMain() {
 }
 
 window.addEventListener("keypress", (e) => {
-  const searchBox = ["accueil", "collection", "histoire"];
+  const searchBox = [
+    "accueil",
+    "collection",
+    "histoire",
+    "draperie",
+    "service de table",
+    "decoration interieur",
+  ];
   const searchInput = document.getElementById("search-input");
   if (e.target.id === "search-input") {
-    if (searchInput !== "" && e.key === "Enter") {
+    if (searchInput.value.trim() !== "" && e.key === "Enter") {
       let table = searchBox.filter((val) =>
         val.includes(searchInput.value.trim().toLowerCase()),
       );
-      if (table[0] === "accueil") {
-        window.location.href = "index.html";
-      } else {
-        window.location.href = `${table[0]}.html`;
+
+      switch (table[0]) {
+        case "accueil":
+          window.location.href = "index.html";
+          break;
+        case "collection":
+          window.location.href = "collection.html";
+          break;
+        case "histoire":
+          window.location.href = "histoire.html";
+          break;
+        case "draperie":
+          window.location.href = "collection.html#draperie";
+          break;
+        case "service de table":
+          window.location.href = "collection.html#table";
+          break;
+        case "decoration interieur":
+          window.location.href = "collection.html#deco";
+          break;
+        default:
+          document.getElementById("msg").classList.toggle("hidden");
+          document.getElementById("msg").innerText =
+            `${searchInput.value.trim()} est introuvable sur le site`;
+          setTimeout(() => {
+            document.getElementById("msg").classList.toggle("hidden");
+          }, 3000);
+          break;
       }
     }
   }
