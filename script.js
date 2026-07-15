@@ -120,32 +120,6 @@ const categories = {
         ],
       },
       {
-        name: "Collection Terre d'Ivoire",
-        status: "available",
-        products: [
-          {
-            image: "asset/photo/image/macro_s3.avif",
-            title: "Parure Ivoire Épurée",
-            price: "50 000 FCFA",
-            description:
-              "Savoir-faire unique mettant en valeur l'éclat et la pureté des lignes ivoiriennes.",
-          },
-        ],
-      },
-      {
-        name: "Collection Adingra",
-        status: "available",
-        products: [
-          {
-            image: "asset/photo/image/lit_belge_adingra.avif",
-            title: "Drap Symboles Adingra",
-            price: "55 000 FCFA",
-            description:
-              "Subtile intégration de symboles chargés d'histoire pour un intérieur protecteur et élégant.",
-          },
-        ],
-      },
-      {
         name: "Collection Traditionnelle",
         status: "sold_out",
         products: [
