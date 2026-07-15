@@ -95,6 +95,7 @@
           id="search-menu"
           class="flex justify-center items-end w-full h-0 bg-white z-1 lg:shadow-black/20 shadow-sm fixed top-0 left-0 overflow-hidden transition-[height] duration-700"
         >
+          <span id="msg" class="absolute p-2 text-[#c55d3a] hidden"></span>
           <input
             id="search-input"
             type="text"
@@ -107,15 +108,17 @@
           id="new-collection"
           class="flex items-center p-10 lg:items-end lg:justify-center min-h-screen lg:p-28 bg-[url(asset/photo/image/new_coll.avif)] bg-center text-white"
         >
-          <div class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3">
-            <span class="font-bold text-2xl lg:text-center title-h1"
-              >Lorem ipsum dolor sit amet.</span
+          <div
+            class="w-full lg:w-96 p-5 lg:p-2 flex flex-col gap-3 backdrop:blur-sm"
+          >
+            <span class="font-bold text-2xl lg:text-xl lg:text-center title-h1"
+              >Découvrez l'âme de notre nouvelle collection</span
             >
             <div>
               <p class="text-wrap lg:text-center">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-                sint error facere cumque dignissimos odit dolor corporis magnam
-                quidem harum!
+                Nos nouvelles créations marient l'énergie de l'artisanat
+                africain à des matières nobles, pour habiller vos nuits d'une
+                sérénité contemporaine.
               </p>
             </div>
           </div>
@@ -138,6 +141,7 @@
 
           <section class="max-w-6xl mx-auto px-6 flex flex-col gap-24">
             <div
+              id="draperie"
               class="flex flex-col md:flex-row items-center gap-12 md:gap-20"
             >
               <div
@@ -199,6 +203,7 @@
                 </button>
               </div>
               <div
+                id="table"
                 class="w-full md:w-1/2 overflow-hidden bg-light aspect-square cursor-pointer group"
                 onclick="showCollection('table')"
               >
@@ -215,6 +220,7 @@
               class="flex flex-col md:flex-row items-center gap-12 md:gap-20"
             >
               <div
+                id="deco"
                 class="w-full md:w-1/2 overflow-hidden bg-light aspect-square cursor-pointer group"
                 onclick="showCollection('deco')"
               >
@@ -287,7 +293,7 @@
       </main>
       <footer class="p-10 lg:p-14 text-center space-y-6 sticky bg-white">
         <div
-          class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-20"
+          class="w-full flex flex-col items-center lg:flex-row lg:items-start gap-5 lg:gap-20"
         >
           <div class="w-full lg:w-1/2">
             <div
@@ -324,9 +330,9 @@
               </div>
             </div>
           </div>
-          <div class="w-full lg:w-1/2">
+          <div class="w-full lg:w-1/2 lg:mt-10">
             <div
-              class="h-full flex flex-col lg:flex-row justify-end items-center lg:items-start gap-5 lg:gap-32"
+              class="h-full flex flex-col lg:flex-row justify-end items-center lg:items-start gap-10 lg:gap-32"
             >
               <div class="flex flex-col items-center lg:items-start gap-2">
                 <span class="text-sm">Livraison</span>
@@ -334,7 +340,7 @@
                 <span class="text-sm">Mention Légal</span>
                 <span class="text-sm">Déclaration de confidentialité</span>
               </div>
-              <div class="flex flex-col lg:items-start lg:gap-10">
+              <div class="flex flex-col lg:items-start gap-5 lg:gap-2">
                 <div class="flex flex-col items-center lg:items-start gap-2">
                   <span class="text-sm">Riviera Anono, Cocody, Abidjan</span>
                   <span class="text-sm">Lun - Sam : 08h00 - 16h30</span>
@@ -349,11 +355,9 @@
                     <a href="histoire.html">Histoire</a>
                   </nav>
                 </div>
-                <img
-                  src="asset/photo/logo/TNB.avif"
-                  alt="image du logo de l'agence The New Brief"
-                  class="w-50"
-                />
+                <span class="text-xs italic text-gray-400"
+                  >Made by a new Gens vision</span
+                >
               </div>
             </div>
           </div>
